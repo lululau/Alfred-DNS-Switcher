@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>com.github.lululau.dnsswitcher</string>
+	<key>connections</key>
+	<dict>
+		<key>657E2628-A26E-49D6-8FBD-67A27BBE73B3</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>A3FA6756-0A92-4B81-BA55-BB05BE5A710E</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>lululau</string>
+	<key>description</key>
+	<string></string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>DNS Switcher</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>62</integer>
+				<key>keyword</key>
+				<string>dns</string>
+				<key>queuedelaycustom</key>
+				<integer>1</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<false/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>script</key>
+				<string>/usr/bin/perl dns_select.pl "{query}"</string>
+				<key>subtext</key>
+				<string>114；Google；V2EX；Cyber；OpenDNS；*</string>
+				<key>title</key>
+				<string>Switch DNS</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>657E2628-A26E-49D6-8FBD-67A27BBE73B3</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>62</integer>
+				<key>script</key>
+				<string>/usr/bin/perl dns_switch.pl "{query}"
+</string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>A3FA6756-0A92-4B81-BA55-BB05BE5A710E</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string>快速修改DNS设置，内置了Google、V2EX、CyberExprsss、114、OpenDNS等多组DNS地址，直接输入 DNS 114即可快速修改。
+修改DNS系统会提示需要管理员密码，设置回系统默认输入DNS * 号。</string>
+	<key>uidata</key>
+	<dict>
+		<key>657E2628-A26E-49D6-8FBD-67A27BBE73B3</key>
+		<dict>
+			<key>ypos</key>
+			<real>40</real>
+		</dict>
+		<key>A3FA6756-0A92-4B81-BA55-BB05BE5A710E</key>
+		<dict>
+			<key>ypos</key>
+			<real>40</real>
+		</dict>
+	</dict>
+	<key>webaddress</key>
+	<string></string>
+</dict>
+</plist>
