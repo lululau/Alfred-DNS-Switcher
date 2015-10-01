@@ -21,7 +21,7 @@ my $option_name = @ARGV[0];
 
 my $use_sudo = $config->{'use_sudo'};
 
-my $option = (grep { $_->{'name'} == $option_name } @{$config->{'options'}})[0];
+my $option = (grep { $_->{'name'} eq $option_name } @{$config->{'options'}})[0];
 
 my $servers = $option->{'servers'};
 
